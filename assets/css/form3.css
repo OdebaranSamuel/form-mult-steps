@@ -1,0 +1,63 @@
+@import url("./form2.css");
+@import url("../css/variaveis.css");
+
+.check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px black;
+    border-radius: 8px;
+    padding: 20px;
+}
+input.checkbox {
+    height: 20px;
+    cursor: pointer;
+}
+.servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--font-ubunto);
+}
+
+.titulo-servico {
+    font-weight: 700;
+    color: var(--Marine-color-blue);
+    font-size: var(--font-size);
+}
+.preco-servico {
+    color: var(--Light-color-gray);
+    font-weight: 500;
+    font-family: var(--font-ubunto);
+}
+.preco-adicional {
+    color: var(--Purplish-color-blue);
+    font-weight: 500;
+    font-family: var(--font-ubunto);
+}
+
+.segundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--White-color);
+    background-color: transparent;
+    margin-top: 30px;
+    font-family: var(--font-ubunto);
+    font-weight: 700;
+    color: var(--White-color);
+}
+.terceiro {
+    background-color: var(--Light-color-blue);
+    border: none;
+    color: var(--Marine-color-blue);
+}
+.btn-selecionado {
+    border: solid 1px var(--Purplish-color-blue);
+    background-color: var(--Magnolia-color);
+}

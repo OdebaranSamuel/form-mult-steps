@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+    --Marine-color-blue: hsl(213, 96%, 18%);
+    --Purplish-color-blue: hsl(243, 100%, 62%);
+    --Pastel-color-blue: hsl(228, 100%, 84%);
+    --Light-color-blue: hsl(206, 94%, 87%);
+    --Strawberry-color-red: hsl(354, 84%, 57%);
+    --Cool-colorgray: hsl(231, 11%, 63%);
+    --Light-color-gray: hsl(229, 24%, 87%);
+    --Magnolia-color: hsl(217, 100%, 97%);
+    --Alabaster-color: hsl(231, 100%, 99%);
+    --White-color: hsl(0, 0%, 100%);
+    --font-ubunto: "Ubuntu", sans-serif;
+    --font-size: 16px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/form2.css">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+<body>
+  <main class="container">
+    <img class="img-fundo" src="./assets/images/bg-sidebar-mobile.svg">
+    <section class="main-section">
+        <div class="main-circulos">
+          <span class="circulo primeiro">1</span>
+          <span class="circulo segundo">2</span>
+          <span class="circulo terceiro">3</span>
+          <span class="circulo quarto">4</span>
+        </div>
+          <div class="main-form">
+            <form class="form">
+              <h1 class="titulo">Slect your plan</h1>
+              <p class="information">You have the option of monthly or yearly billing.</p>
+              <button type="button" class="btn" id="0">
+                  <img src="./assets/images/icon-arcade.svg"> 
+                <div class="img-preco">
+                    <h2 class="modalidade">Arcade</h2>
+                    <p class="preco"> $9/mo</p>
+                </div>
+            </button>
+              <button type="button" class="btn" id="1" >
+                <img src="./assets/images/icon-advanced.svg" alt="">
+                <div class="img-preco">
+                    <h2 class="modalidade">Advanced</h2>
+                    <p class="preco"> $12/mo</p>
+
+                </div>
+            </button>
+              <button type="button" class="btn" id="2">
+                <img src="./assets/images/icon-pro.svg" alt="">
+                <div class="img-preco">
+                    <h2 class="modalidade"> Pro</h2>
+                    <p class="preco"> $15/mo</p>
+
+                </div>
+            </button>
+              <div class="switch-container">
+                <p class="mes">Monthly</p>
+                <input type="checkbox" id="switch-shadow" class="switch switch-shadow">
+                <label for="switch-shadow"></label>
+                <p class="ano">Yearly</p>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <div class="rodape">
+        <button class="voltar">Go Back</button>
+        <button class="btn-submit" type="submit">Next Step</button>
+      </div>
+
+      <script src="./js/form2.js"></script>
+</body>
+</html>
