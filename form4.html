@@ -6,61 +6,60 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/form3.css">
+  <link rel="stylesheet" href="./assets/css/form4.css">
   
   <title>Frontend Mentor | Multi-step form</title>
 
 </head>
 <body>
   <main class="container">
-    <img class="img-fundo" src="./assets/images/bg-sidebar-mobile.svg">
+    <div class="img-circulos">
+        <span class="circulo primeiro">1</span>
+        <span class="circulo segundo">2</span>
+        <span class="circulo terceiro">3</span>
+        <span class="circulo quarto">4</span>
+    </div> 
     <section class="main-section">
-        <div class="main-circulos">
-          <span class="circulo primeiro">1</span>
-          <span class="circulo segundo">2</span>
-          <span class="circulo terceiro">3</span>
-          <span class="circulo quarto">4</span>
-        </div>
-          <div class="main-form">
-            <form class="form">
-              <h1 class="titulo">Finishing up</h1>
-              <p class="information">Double-check everything looks OK before confirming.</p>
+        <div class="main-form">
+          <form class="form">
+            <h1 class="titulo">Finishing up</h1>
+            <p class="information">Double-check everything looks OK before confirming.</p>
 
+            <div class="check"> 
+              <input type="checkbox" class="checkbox">
+              <div class="servico">
+                  <h2 class="titulo-servico">Online service</h2>
+                  <p class="preco-servico"> Access to multiplayer games</p>
+              </div>
+              <p class="preco-adicional">+$1/mo</p>
+              </div>
+              
               <div class="check"> 
                 <input type="checkbox" class="checkbox">
                 <div class="servico">
-                    <h2 class="titulo-servico">Online service</h2>
-                    <p class="preco-servico"> Access to multiplayer games</p>
+                    <h2 class="titulo-servico">Larger storage</h2>
+                    <p class="preco-servico"> Extra 1TB of cloud save</p>
                 </div>
-                <p class="preco-adicional">+$1/mo</p>
+                <p class="preco-adicional">+$2/mo</p>
                 </div>
                 
                 <div class="check"> 
                   <input type="checkbox" class="checkbox">
                   <div class="servico">
-                      <h2 class="titulo-servico">Larger storage</h2>
-                      <p class="preco-servico"> Extra 1TB of cloud save</p>
+                      <h2 class="titulo-servico">Customizable Profile</h2>
+                      <p class="preco-servico"> Custom theme on your profile</p>
                   </div>
                   <p class="preco-adicional">+$2/mo</p>
                   </div>
-                  
-                  <div class="check"> 
-                    <input type="checkbox" class="checkbox">
-                    <div class="servico">
-                        <h2 class="titulo-servico">Customizable Profile</h2>
-                        <p class="preco-servico"> Custom theme on your profile</p>
-                    </div>
-                    <p class="preco-adicional">+$2/mo</p>
-                    </div>
-    
+  
 
-            </form>
-          </div>
-        </section>
-      </main>
-      <div class="rodape">
-        <button class="voltar">Go Back</button>
-        <button class="btn-submit" type="submit">Next Step</button>
-      </div>
+          </form>
+        </div>
+        <div class="rodape">
+          <button class="voltar">Go Back</button>
+          <button class="btn-submit" type="submit">Next Step</button>
+        </div>
+    </section>
+  </main>
 </body>
 </html>

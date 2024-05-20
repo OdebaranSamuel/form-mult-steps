@@ -1,4 +1,4 @@
-export class Complementos {
+class Complementos {
     constructor() {
         const form = document.querySelector(".form");
         this.checando();

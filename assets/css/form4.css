@@ -1,0 +1,24 @@
+@import url("./form1.css");
+@import url("./form3.css");
+@import url("../css/variaveis.css");
+
+.terceiro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--White-color);
+    background-color: transparent;
+    margin-top: 30px;
+    font-family: var(--font-ubunto);
+    font-weight: 700;
+    color: var(--White-color);
+}
+.quarto {
+    background-color: var(--Light-color-blue);
+    border: none;
+    color: var(--Marine-color-blue);
+}

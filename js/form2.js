@@ -1,4 +1,4 @@
-export class SelecionaPlano {
+class SelecionaPlano {
     constructor() {
         const formulario = document.querySelector(".form");
         this.voltando();
