@@ -22,3 +22,37 @@
     border: none;
     color: var(--Marine-color-blue);
 }
+
+.confirmacao {
+    background-color: var(--Magnolia-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.confima-itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.titulo-servico {
+    font-weight: 700;
+    color: var(--Marine-color-blue);
+    font-size: var(--font-size);
+}
+
+.preco-adicional {
+    font-weight: 700;
+    color: var(--Marine-color-blue);
+    font-size: var(--font-size);
+}

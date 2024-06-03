@@ -1,4 +1,4 @@
-class Complementos {
+export class Complementos {
     constructor() {
         const form = document.querySelector(".form");
         this.checando();
@@ -19,22 +19,44 @@ class Complementos {
         });
     }
 
+    salvaDados(nome, valor) {
+        let listaDados = JSON.parse(localStorage.getItem("listaDados")) || [];
+        let objDados = {
+            modalidade: nome,
+            preco: valor,
+        };
+
+        listaDados.push(objDados);
+        localStorage.setItem("listaDados", JSON.stringify(listaDados));
+    }
+    removeDados(nome, valor) {
+        let listaDados = JSON.parse(localStorage.getItem("listaDados")) || [];
+        listaDados = listaDados.filter(
+            (item) => !(item.modalidade === nome && item.preco === valor)
+        );
+        localStorage.setItem("listaDados", JSON.stringify(listaDados));
+    }
+
     checando() {
         const checkbox = document.querySelectorAll(".checkbox");
         checkbox.forEach((caixa) => {
             caixa.addEventListener("click", () => {
                 let elemento = caixa.parentElement;
+                let servico = elemento
+                    .querySelector(".titulo-servico")
+                    .textContent.trim();
+                let preco = elemento
+                    .querySelector(".preco-adicional")
+                    .textContent.trim();
                 if (caixa.checked) {
                     elemento.classList.add("btn-selecionado");
-                    let preco = elemento
-                        .querySelector(".preco-adicional")
-                        .textContent.trim();
-                    return preco;
+                    this.salvaDados(servico, preco);
                 } else {
                     elemento.classList.remove("btn-selecionado");
+                    this.removeDados(servico, preco);
                 }
             });
         });
     }
 }
-const complemento = new Complementos();
+new Complementos();

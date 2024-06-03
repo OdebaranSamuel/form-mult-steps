@@ -1,4 +1,4 @@
-class SelecionaPlano {
+export class SelecionaPlano {
     constructor() {
         const formulario = document.querySelector(".form");
         this.voltando();
@@ -20,6 +20,14 @@ class SelecionaPlano {
         });
     }
 
+    salvandoDados(nome, valor) {
+        let dados = {
+            modalidade: nome,
+            preco: valor,
+        };
+
+        localStorage.setItem("dados", JSON.stringify(dados));
+    }
     planoSelecionado() {
         const btns = document.querySelectorAll(".btn");
         btns.forEach((btn) => {
@@ -28,9 +36,15 @@ class SelecionaPlano {
                     botao.classList.remove("btn-selecionado");
                 });
                 btn.classList.add("btn-selecionado");
+                let modalidade = btn
+                    .querySelector(".modalidade")
+                    .textContent.trim();
+
+                let preco = btn.querySelector(".preco").textContent.trim();
+                this.salvandoDados(modalidade, preco);
             });
         });
     }
 }
 
-const plano = new SelecionaPlano();
+new SelecionaPlano();
