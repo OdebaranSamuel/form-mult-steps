@@ -18,6 +18,13 @@ class ValidaFormulario {
         }
     }
 
+    // tamanhoTela() {
+    //     const larguraTela = window.innerWidth;
+    //     if(larguraTela >= 1024){
+
+    //     }
+    // }
+
     validaInput() {
         let valida = true;
         for (let errorText of this.formulario.querySelectorAll(".error-text")) {

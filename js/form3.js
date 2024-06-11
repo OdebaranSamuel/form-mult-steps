@@ -1,14 +1,18 @@
 export class Complementos {
     constructor() {
-        const form = document.querySelector(".form");
         this.checando();
         this.voltando();
         this.next();
+        this.checaAno();
     }
     voltando() {
         const voltar = document.querySelector(".voltar");
+
         voltar.addEventListener("click", () => {
             window.location.href = "form2.html";
+            localStorage.removeItem("dados");
+            localStorage.removeItem("sinal");
+            localStorage.removeItem("listaDados");
         });
     }
 
@@ -37,11 +41,28 @@ export class Complementos {
         localStorage.setItem("listaDados", JSON.stringify(listaDados));
     }
 
+    checaAno() {
+        let flag = JSON.parse(localStorage.getItem("sinal"));
+        const preco = document.querySelectorAll(".preco-adicional");
+
+        const precoObj = {
+            service: "+$10/yr",
+            storage: "+$20/yr",
+            profile: "+$20/yr",
+        };
+        if (flag === true) {
+            preco[0].innerHTML = precoObj.service;
+            preco[1].innerHTML = precoObj.storage;
+            preco[2].innerHTML = precoObj.profile;
+        }
+    }
+
     checando() {
         const checkbox = document.querySelectorAll(".checkbox");
         checkbox.forEach((caixa) => {
             caixa.addEventListener("click", () => {
                 let elemento = caixa.parentElement;
+                console.log(elemento);
                 let servico = elemento
                     .querySelector(".titulo-servico")
                     .textContent.trim();

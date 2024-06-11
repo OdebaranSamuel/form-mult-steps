@@ -27,8 +27,7 @@
     background-color: var(--Magnolia-color);
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    border-radius: 8px;
 }
 
 .confima-itens {
@@ -37,12 +36,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 .itens {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 5px;
+    margin-left: 10px;
 }
 
 .titulo-servico {
@@ -55,4 +55,52 @@
     font-weight: 700;
     color: var(--Marine-color-blue);
     font-size: var(--font-size);
+    margin-right: 10px;
+}
+hr {
+    height: 1px;
+    background-color: var(--Light-color-gray);
+    border: none;
+    width: 95%;
+}
+
+.verifica-servico {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 10px 10px;
+    color: var(--Cool-colorgray);
+}
+
+.container-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.text-total {
+    margin-left: 10px;
+}
+.valor-total {
+    margin-right: 10px;
+}
+
+.text-info {
+    color: var(--Cool-colorgray);
+    font-family: var(--font-ubunto);
+}
+
+.text-preco {
+    font-family: var(--font-ubunto);
+    color: var(--Marine-color-blue);
+    font-weight: 400;
+}
+.text-total {
+    color: var(--Cool-colorgray);
+    font-family: var(--font-ubunto);
+}
+.valor-total {
+    font-family: var(--font-ubunto);
+    color: var(--Purplish-color-blue);
+    font-weight: 700;
 }

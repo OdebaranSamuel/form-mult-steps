@@ -1,9 +1,9 @@
 export class SelecionaPlano {
     constructor() {
-        const formulario = document.querySelector(".form");
         this.voltando();
         this.next();
         this.planoSelecionado();
+        this.mudaPlano();
     }
 
     voltando() {
@@ -18,6 +18,77 @@ export class SelecionaPlano {
         proximo.addEventListener("click", () => {
             window.location.href = "form3.html";
         });
+    }
+
+    mudaPlano() {
+        const inputCheck = document.querySelector(".switch");
+        const divPai = document.querySelector(".btn-principal");
+
+        const mes = [
+            {
+                modalidade: "Arcade",
+                preco: "$9/mo",
+            },
+            {
+                modalidade: "Advanced",
+                preco: "$12/mo",
+            },
+
+            {
+                modalidade: "Pro",
+                preco: "$15/mo",
+            },
+        ];
+
+        const ano = [
+            {
+                modalidade: "Arcade",
+                preco: "$90/yr",
+            },
+            {
+                modalidade: "Advanced",
+                preco: "$120/yr",
+            },
+
+            {
+                modalidade: "Pro",
+                preco: "$150/yr",
+            },
+        ];
+
+        const plano = divPai.querySelectorAll(".modalidade");
+        const precoPlano = divPai.querySelectorAll(".preco");
+        const btns = document.querySelectorAll(".btn");
+        let flag;
+        inputCheck.addEventListener("click", () => {
+            if (inputCheck.checked) {
+                flag = true;
+                const p = document.createElement("p");
+                p.innerHTML = `2 months free`;
+                btns.forEach((el) => {
+                    el.classList.remove("btn-selecionado");
+                });
+
+                for (let i = 0; i < 3; i++) {
+                    plano[i].innerHTML = ano[i].modalidade;
+                    precoPlano[i].innerHTML = ano[i].preco;
+                }
+            } else {
+                flag = false;
+                btns.forEach((el) => {
+                    el.classList.remove("btn-selecionado");
+                });
+                for (let i = 0; i < 3; i++) {
+                    plano[i].innerHTML = mes[i].modalidade;
+                    precoPlano[i].innerHTML = mes[i].preco;
+                }
+            }
+            return this.sinal(flag);
+        });
+    }
+
+    sinal(flag) {
+        localStorage.setItem("sinal", JSON.stringify(flag));
     }
 
     salvandoDados(nome, valor) {
