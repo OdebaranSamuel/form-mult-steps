@@ -62,7 +62,9 @@ class VerificandoEscolhas {
         //capturando os valores retornados por essas funções
         const modalidadeDados = this.pegaModalidade();
         const complementosDados = this.pegaComplemento();
+        console.log(modalidadeDados);
 
+        const sinal = JSON.parse(localStorage.getItem("sinal"));
         div.innerHTML = `
             <div class="confima-itens">
             <div class="itens">
@@ -94,14 +96,23 @@ class VerificandoEscolhas {
             cont += valorComplemento;
             let valorModalidade = this.extrairNumero(modalidadeDados.preco);
             let totalFinal = cont + valorModalidade;
+            if (sinal === true) {
+                valorTotal.innerHTML = `
+                +$${totalFinal}/yr
+                `;
 
-            valorTotal.innerHTML = `
-            +$${totalFinal}/mo
-            `;
+                textoTotal.innerHTML = `
+                Total(per year)
+                `;
+            } else {
+                valorTotal.innerHTML = `
+                +$${totalFinal}/mo
+                `;
 
-            textoTotal.innerHTML = `
-            Total(per month)
-            `;
+                textoTotal.innerHTML = `
+                Total(per month)
+                `;
+            }
 
             divModalidade.appendChild(textoInfo);
             divModalidade.appendChild(textoPreco);

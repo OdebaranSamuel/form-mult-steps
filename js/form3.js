@@ -55,6 +55,7 @@ export class Complementos {
             preco[1].innerHTML = precoObj.storage;
             preco[2].innerHTML = precoObj.profile;
         }
+        return flag;
     }
 
     checando() {
@@ -62,7 +63,6 @@ export class Complementos {
         checkbox.forEach((caixa) => {
             caixa.addEventListener("click", () => {
                 let elemento = caixa.parentElement;
-                console.log(elemento);
                 let servico = elemento
                     .querySelector(".titulo-servico")
                     .textContent.trim();
