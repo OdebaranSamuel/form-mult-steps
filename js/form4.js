@@ -33,6 +33,12 @@ class VerificandoEscolhas {
         return parseFloat(str.replace(/[^0-9.]/g, ""));
     }
 
+    limpaDados() {
+        localStorage.removeItem("dados");
+        localStorage.removeItem("sinal");
+        localStorage.removeItem("listaDados");
+    }
+
     criaCard() {
         const form = document.querySelector(".form");
 
@@ -61,7 +67,7 @@ class VerificandoEscolhas {
             <div class="confima-itens">
             <div class="itens">
               <p class="titulo-servico">${modalidadeDados.modalidade}</p>
-              <a href="form2.html" class="mudar">Change</a>
+              <a href="form2.html" class="mudar">Change </a>
             </div>
             <p class="preco-adicional">${modalidadeDados.preco}</p>
           </div>
@@ -107,7 +113,9 @@ class VerificandoEscolhas {
 
         form.appendChild(div);
         form.appendChild(divTotal);
+        const mudanca = document.querySelector(".mudar");
+        mudanca.onclick = this.limpaDados();
     }
 }
 
-const modalidade = new VerificandoEscolhas();
+new VerificandoEscolhas();
