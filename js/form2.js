@@ -9,7 +9,7 @@ export class SelecionaPlano {
     voltando() {
         const voltar = document.querySelector(".voltar");
         voltar.addEventListener("click", () => {
-            window.location.href = "form1.html";
+            window.location.href = "index.html";
         });
     }
 

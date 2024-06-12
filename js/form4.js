@@ -62,7 +62,6 @@ class VerificandoEscolhas {
         //capturando os valores retornados por essas funções
         const modalidadeDados = this.pegaModalidade();
         const complementosDados = this.pegaComplemento();
-        console.log(modalidadeDados);
 
         const sinal = JSON.parse(localStorage.getItem("sinal"));
         div.innerHTML = `
